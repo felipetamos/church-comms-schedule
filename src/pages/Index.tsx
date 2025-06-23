@@ -3,6 +3,7 @@ import React from 'react';
 import { TeamManager } from '@/components/TeamManager';
 import { ScheduleCalendar } from '@/components/ScheduleCalendar';
 import { ScheduleGenerator } from '@/components/ScheduleGenerator';
+import { UserMenu } from '@/components/UserMenu';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -11,13 +12,18 @@ const Index = () => {
     <div className="min-h-screen bg-background p-4">
       <div className="max-w-7xl mx-auto">
         <Card className="mb-6">
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl font-bold text-primary">
-              Sistema de Agendamento - Departamento de Comunicação
-            </CardTitle>
-            <CardDescription className="text-lg">
-              Gerenciamento de equipes e cronogramas para cultos e vigílias
-            </CardDescription>
+          <CardHeader>
+            <div className="flex justify-between items-start">
+              <div>
+                <CardTitle className="text-3xl font-bold text-primary">
+                  Sistema de Agendamento - Departamento de Comunicação
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Gerenciamento de equipes e cronogramas para cultos e vigílias
+                </CardDescription>
+              </div>
+              <UserMenu />
+            </div>
           </CardHeader>
         </Card>
 
